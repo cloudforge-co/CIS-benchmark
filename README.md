@@ -12,7 +12,7 @@ cd docker-bench-security
 sudo sh docker-bench-security.sh -l cis-results
 ```
 
-### Converting the restuls
+### Converting the results
 1. Convert the results to a CSV file:
 
 ```
@@ -40,11 +40,11 @@ cat ${kube-bench-folder}/cfg/config.yaml
 ./kube-bench --config-dir `pwd`/cfg --config `pwd`/cfg/config.yaml --version 1.25 --noremediations --json > cis-results.json
 ```
 
-### Converting the restuls
+### Converting the results
 1. Convert the results to a CSV file:
 ```
 git clone https://github.com/cloudforge-co/CIS-benchmark.git
 cd CIS-benchmark
 export S3_FILE_NAME="cis-results.json"
-python docker-convert.py
+python kube-convert.py
 ```
